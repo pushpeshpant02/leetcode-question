@@ -8,7 +8,7 @@ public:
         for(int i=0; i<s.size(); i++){
             mp[s[i]]++;
             freq=max(freq,mp[s[i]]);
-            if((i-j+1)-freq>k){
+            while((i-j+1)-freq>k){
                 mp[s[j]]--;
                 j++;
             }

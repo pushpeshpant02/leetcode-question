@@ -1,8 +1,7 @@
 class Solution {
 public:
-    int minimumPushes(string word) {
-        int n = word.size();
-        int m = (n - 1) / 8 + 1;
-        return m * (m - 1) * 4 + (n - (m - 1) * 8) * m;
+    int minimumPushes(string& word) {
+        auto [q, r]=div(word.size(), 8);
+        return r*(q+1)+q*(q+1)*4;
     }
 };
